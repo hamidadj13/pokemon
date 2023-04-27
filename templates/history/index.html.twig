@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% for user in pokemon %}
+    Email: {{ user.email }}
+    {% for pokemon in user.pokemon %}
+        <li>{{ user.pokemon.nom }}</li>
+    {% endfor %}
+{% endfor %}
